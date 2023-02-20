@@ -49,13 +49,13 @@ function Banner() {
                             media='(min-width: 375px)'
                         ></source>
                         <img
-                            style={{ position: 'absolute', width: '100vw', height: '100vh' }}
+                            style={{ position: 'absolute', width: '100vw' }}
                             src='/video-placeholder@desktop.jpg'
                             alt='Video Placeholder'
                         />
                     </picture>
                 )}
-                <video ref={videoRef} src={videoSrc} muted loop />
+                <video ref={videoRef} src={videoSrc} muted loop style={{ width: '100vw' }} />
             </section>
         </>
     )
