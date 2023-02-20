@@ -1,11 +1,16 @@
+import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
+
 import useInViewport from '@/utils/useInViewport'
+import useDetectVideoCanPlay from '@/utils/useDetectVideoCanPlay'
 
 function Banner() {
     const videoRef = useRef(null)
     const [videoSrc, setVideoSrc] = useState('')
-    // console.log(useInViewport)
+
+    const canPlay = useDetectVideoCanPlay(videoRef)
     const isInViewport = useInViewport(videoRef)
+
     useEffect(() => {
         const cachedVideoSrc = localStorage.getItem('videoSrc')
         const cachedTime = localStorage.getItem('videoSrcTime')
@@ -36,7 +41,20 @@ function Banner() {
     }, [isInViewport])
     return (
         <>
-            <video ref={videoRef} src={videoSrc} loop />
+            <section style={{ position: 'relative' }}>
+                {canPlay ? null : (
+                    <div style={{ position: 'absolute', width: '100vw', height: '100vh' }}>
+                        <picture>
+                            <source
+                                src='/video-placeholder@desktop.jpg'
+                                media='(min-width: 375px)'
+                            ></source>
+                            <img src='/video-placeholder@mobile.jpg' alt='Video Placeholder' />
+                        </picture>
+                    </div>
+                )}
+                <video ref={videoRef} src={videoSrc} muted loop />
+            </section>
         </>
     )
 }
