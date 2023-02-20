@@ -43,15 +43,17 @@ function Banner() {
         <>
             <section style={{ position: 'relative' }}>
                 {canPlay ? null : (
-                    <div style={{ position: 'absolute', width: '100vw', height: '100vh' }}>
-                        <picture>
-                            <source
-                                src='/video-placeholder@desktop.jpg'
-                                media='(min-width: 375px)'
-                            ></source>
-                            <img src='/video-placeholder@mobile.jpg' alt='Video Placeholder' />
-                        </picture>
-                    </div>
+                    <picture>
+                        <source
+                            src='/video-placeholder@mobile.jpg'
+                            media='(min-width: 375px)'
+                        ></source>
+                        <img
+                            style={{ position: 'absolute', width: '100vw', height: '100vh' }}
+                            src='/video-placeholder@desktop.jpg'
+                            alt='Video Placeholder'
+                        />
+                    </picture>
                 )}
                 <video ref={videoRef} src={videoSrc} muted loop />
             </section>
