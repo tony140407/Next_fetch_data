@@ -8,6 +8,7 @@
     position: relative;
 }
 .Intro__content__text {
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -19,7 +20,7 @@
 }
 .Intro__image1 {
     position: absolute;
-    bottom: 234px;
+    bottom: 178px;
     left: 0;
 }
 .Intro__image2 {
@@ -46,4 +47,52 @@
     position: absolute;
     top: 43px;
     left: 472px;
+}
+
+@media screen and (max-width: 767px) {
+    .Intro__content {
+        width: 375px;
+        height: 849px;
+        position: relative;
+    }
+    .Intro__content__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 32px;
+        line-height: 43.58px;
+        font-weight: 400;
+    }
+    .Intro__image1 {
+        position: absolute;
+        bottom: 178px;
+        left: -155px;
+    }
+    .Intro__image2 {
+        position: absolute;
+        bottom: 103px;
+        left: 160px;
+    }
+    .Intro__image3 {
+        position: absolute;
+        bottom: 446px;
+        left: 345px;
+    }
+    .Intro__image4 {
+        position: absolute;
+        top: 205px;
+        left: 263px;
+    }
+    .Intro__image5 {
+        position: absolute;
+        top: 221px;
+        left: 0px;
+    }
+    .Intro__image6 {
+        position: absolute;
+        top: 36px;
+        left: 36px;
+    }
 }
