@@ -1,0 +1,49 @@
+.Intro {
+    width: 100%;
+    overflow: hidden;
+}
+.Intro__content {
+    width: 1440px;
+    height: 1080px;
+    position: relative;
+}
+.Intro__content__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 48px;
+    line-height: 65.38px;
+    font-weight: 400;
+}
+.Intro__image1 {
+    position: absolute;
+    bottom: 234px;
+    left: 0;
+}
+.Intro__image2 {
+    position: absolute;
+    bottom: 89px;
+    left: 903px;
+}
+.Intro__image3 {
+    position: absolute;
+    bottom: 374px;
+    left: 1258px;
+}
+.Intro__image4 {
+    position: absolute;
+    top: 150px;
+    left: 995px;
+}
+.Intro__image5 {
+    position: absolute;
+    top: 210px;
+    left: 50px;
+}
+.Intro__image6 {
+    position: absolute;
+    top: 43px;
+    left: 472px;
+}
