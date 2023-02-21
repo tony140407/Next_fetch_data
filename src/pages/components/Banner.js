@@ -38,7 +38,7 @@ function Banner() {
         } else {
             videoRef.current.pause()
         }
-    }, [isInViewport])
+    }, [isInViewport, videoSrc])
     return (
         <>
             <section style={{ position: 'relative' }}>
